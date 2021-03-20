@@ -4,10 +4,9 @@ from src.config.db import DB
 class UserModel():
     def traerTodos(self):
         cursor = DB.cursor()
-        cursor.execute('select * from users ')
+        cursor.execute('show databases')
         usuarios = cursor.fetchall()
         cursor.close()
-
         return usuarios
 
     def crear_usuario(self, nombre, apellido, celular, email, password):
