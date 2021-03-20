@@ -1,5 +1,5 @@
 -- --------------------------------------------------------
--- Host:                         localhost
+-- Host:                         127.0.0.1
 -- Versión del servidor:         10.5.9-MariaDB - mariadb.org binary distribution
 -- SO del servidor:              Win64
 -- HeidiSQL Versión:             11.0.0.5919
@@ -12,11 +12,11 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Volcando estructura de base de datos para flask_crud
-CREATE DATABASE IF NOT EXISTS `flask_crud` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `flask_crud`;
+-- Volcando estructura de base de datos para flask_mvc
+CREATE DATABASE IF NOT EXISTS `flask_mvc` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `flask_mvc`;
 
--- Volcando estructura para tabla flask_crud.users
+-- Volcando estructura para tabla flask_mvc.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(255) NOT NULL,
@@ -25,14 +25,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla flask_crud.users: ~2 rows (aproximadamente)
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `nombre`, `apellido`, `celular`, `email`, `password`) VALUES
-	(44, 'test', 'mora', '3112267585', 'test@gmail.com', '12345'),
-	(45, 'test', 'mora', '3112267585', 'test@gmail.com', '1234');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+-- La exportación de datos fue deseleccionada.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
