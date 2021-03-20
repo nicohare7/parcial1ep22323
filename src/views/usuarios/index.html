@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %} {% block titulo %} Productos {% endblock %} {% block contenido %}
+<h1>Usuarios</h1>
+
+<a href="{{ url_for('crear_usuario') }}">Agregar Usuario</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Celular</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user['id'] }}</td>
+            <td>{{ user['nombre'] }}</td>
+            <td>{{ user['apellido'] }}</td>
+            <td>{{ user['celular'] }}</td>
+            <td>{{ user['email'] }}</td>
+            <td>{{ user['password'] }}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+
+{% endblock %}

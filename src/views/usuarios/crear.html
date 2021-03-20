@@ -1,0 +1,38 @@
+{% extends 'layouts/base.html' %} 
+{% block titulo %} Crear Productos {% endblock %} 
+
+{% block contenido %}
+<h1>Crear usuario</h1>
+<a href="{{ url_for('usuarios') }}">volver</a>
+
+<form action="{{ url_for('crear_usuario') }}" method="POST">
+   
+    <div class="mb-3">
+        <label for="nombre">Nombre</label>
+        <input type="text" required class="form-control" id="nombre" name="nombre">
+    </div>
+    <div class="mb-3">
+        <label for="apellido">Apellido</label>
+        <input type="text" required class="form-control" id="apellido" name="apellido">
+    </div>    
+    <div class="mb-3">
+        <label for="celular">Celular</label>
+        <input type="number" required class="form-control" id="celular" name="celular">
+    </div>
+    <div class="mb-3">
+        <label for="email">Email</label>
+        <input type="email" required class="form-control" id="email" name="email">
+    </div>
+    <div class="mb-3">
+        <label for="password">Password</label>
+        <input type="password" required class="form-control" id="password" name="password">
+    </div>  
+    <button type="submit" class="btn btn-primary">Guardar</button>
+
+    
+</form>
+
+<script>
+   
+</script>
+{% endblock%}
